@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <AssemblyName>FoodToSave.Net</AssemblyName>
+        <RootNamespace>FoodToSave.Net</RootNamespace>
+        
+        <TargetFrameworks>netstandard2.0;netcoreapp3.1;net6.0;net8.0</TargetFrameworks>
+        <CheckEolTargetFramework>false</CheckEolTargetFramework>
+        <LangVersion>latest</LangVersion>
+        
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
+    <PropertyGroup Label="NuGet">
+        <Title>FoodToSave.Net</Title>
+        <Description>A client api based on Food To Save's mobile app.</Description>
+        
+        <Authors>tcortega</Authors>
+        <PackageTags>foodtosave</PackageTags>
+        <Description>Copyright 2024 tcortega</Description>
+
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
+
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <RepositoryUrl>https://github.com/tcortega/FoodToSave.Net</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+        <Copyright>
+            Copyright © 2024 tcortega
+        </Copyright>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <None Include="..\..\art\icon.png" Pack="true" PackagePath="\" />
+        <None Include="..\..\readme.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Diagnostics" Version="8.2.2" />
+        <PackageReference Include="Microsoft.CodeAnalysis.PerformanceSensitiveAnalyzers" Version="3.3.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
+        <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="MinVer" Version="5.0.0">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="PolySharp" Version="1.14.1">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Refit" Version="7.1.2" />
+        <PackageReference Include="Refit.HttpClientFactory" Version="7.1.2" />
+    </ItemGroup>
+
+    <PropertyGroup Label="MinVer">
+        <MinVerAutoIncrement>minor</MinVerAutoIncrement>
+        <MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
+        <MinVerTagPrefix>v</MinVerTagPrefix>
+    </PropertyGroup>
+</Project>
