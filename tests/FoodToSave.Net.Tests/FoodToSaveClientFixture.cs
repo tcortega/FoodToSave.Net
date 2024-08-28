@@ -15,6 +15,7 @@ public class FoodToSaveClientFixture : IAsyncLifetime
     public FoodToSaveClientFixture()
     {
         var configuration = new ConfigurationBuilder()
+            .AddEnvironmentVariables()
             .AddUserSecrets(Assembly.GetExecutingAssembly())
             .Build();
 
